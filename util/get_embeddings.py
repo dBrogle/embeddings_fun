@@ -1,7 +1,9 @@
 import json
 import os
 from typing import Dict, List
+
 from openai import OpenAI
+
 from .constants import OPENAI_LARGE_EMBEDDINGS_SAVE_PATH
 
 # Initialize the embeddings cache

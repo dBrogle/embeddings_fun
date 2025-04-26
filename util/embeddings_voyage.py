@@ -1,14 +1,16 @@
-import time
-import voyageai
-import os
 import json
-from PIL import Image
+import os
+import time
 from typing import Dict, List
+
+import voyageai
+from PIL import Image
+
 from .constants import (
+    IMAGE_OPTIONS_TEXTS,
+    VOYAGE_EMBEDDINGS_SAVE_PATH,
     ImageOptions,
     get_image_option_as_pil_image,
-    VOYAGE_EMBEDDINGS_SAVE_PATH,
-    IMAGE_OPTIONS_TEXTS,
     get_key_from_image_option,
 )
 
@@ -138,7 +140,8 @@ def get_embeddings_for_all_image_option_texts():
     counter = 0
     for key, value in IMAGE_OPTIONS_TEXTS.items():
         for item in value.values():
-            embedding = get_embedding_for_text(item)
+            # Just run this, as it will cache it
+            get_embedding_for_text(item)
             print("Got embedding for ", item)
             counter += 1
             if counter % 3 == 0:

@@ -1,9 +1,10 @@
-from util.get_embeddings import get_embedding
-from states_graph import get_all_state_names
+import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
-from states_graph import graph_state_data, SAMPLE_STATE_QUERIES
-import matplotlib.pyplot as plt
+
+from states_graph import get_all_state_names, graph_state_data
+from states_queries import SAMPLE_STATE_QUERIES
+from util.get_embeddings import get_embedding
 
 
 def run_states_graph_with_phrase(phrase: str):

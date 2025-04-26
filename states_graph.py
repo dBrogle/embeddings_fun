@@ -1,8 +1,8 @@
 import geopandas as gpd
 import matplotlib.pyplot as plt
 import pandas as pd
+
 from util.constants import ShapeFiles
-from matplotlib.colors import TwoSlopeNorm
 
 
 def get_all_state_names() -> list[str]:
@@ -21,13 +21,6 @@ def graph_state_data(
     states = gpd.read_file(ShapeFiles.US_STATES.value)
     # Merge the data with the GeoDataFrame
     states = states.merge(data, on="name", how="left")
-
-    # Calculate median for centering
-    vmin = data["value"].min()
-    vmax = data["value"].max()
-    vcenter = data["value"].median()
-
-    norm = TwoSlopeNorm(vmin=vmin, vcenter=vcenter, vmax=vmax)
 
     # Plot the map
     # Get new figure and axis

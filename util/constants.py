@@ -1,5 +1,6 @@
 import os
 from enum import Enum
+
 from PIL import Image
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
