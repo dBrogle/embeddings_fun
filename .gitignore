@@ -1,0 +1,4 @@
+data/**
+graphs/**
+venv/**
+**/__pycache__/**
