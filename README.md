@@ -1,15 +1,18 @@
-# Project Title
+# Embeddings Fun
 
 Compare any phrase (or list of phrases) you want to states on a graph
 
 You need an OpenAI api key for the embeddings. It saves all phrases'
 embeddings so that it's both faster and doesn't burn unnecessary tokens.
 
-Requirements:
+
+---
+
+## Requirements:
+
 OPENAI_API_KEY. You can search for it (Vscode: CMD+SHIFT+F) for "openai_api_key"
 This should be in your environment. If you have this everything should run after
 the setup instructions.
----
 
 ## Setup Instructions
 
